@@ -1,0 +1,21 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": null,
+    "database": "sbhvi_mailing_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "operatorsAliases": false,
+    "dialect":"postgres",
+    "ssl":true,
+    "dialectOptions": {
+      "ssl": {
+        "require":true 
+      } 
+    }
+  }
+}
