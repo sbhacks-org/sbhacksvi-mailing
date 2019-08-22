@@ -1,4 +1,10 @@
 
+@font-face {
+	font-family: NexaBold;
+	src: url(assets/fonts/NexaBold.otf);
+}
+
+
 #landing {
 	background-image: url("assets/png/Asset 15.png");
 	background-size: cover;
@@ -20,11 +26,22 @@
 	background-size: cover;
 	width: 100%;
 	height: 65px;
+	display: flex;
 }
 
 img#centerLogo {
-	width: 13%;
-	
+	width: 20%;
+	position: fixed;
+	left: 40%;
+	top: 40%;
+}
+
+img#waveGroup {
+	width: 80%;
+	position: fixed;
+	left: 15%;
+	top: 20%;
+	opacity: .4;
 }
 
 img#leftBiome {
