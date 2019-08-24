@@ -4,6 +4,10 @@
 	src: url(assets/fonts/NexaBold.otf);
 }
 
+body {
+	font-family: NexaBold;
+	color: #7498bc;
+}
 
 #landing {
 	background-image: url("assets/png/Asset 15.png");
@@ -29,6 +33,37 @@
 	display: flex;
 }
 
+#navBar ul {
+	list-style-type: : none;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+#navBar ul li {
+	display: inline;
+	float: right;
+}
+
+#navBar ul li a {
+	display: block;
+	text-align: center;
+	padding: 23px 16px;
+	color: #7498bc;
+	text-decoration-line: none;
+}
+
+#navBar ul li a:hover {
+	color: #43afed;
+	background-color: rgba(255, 255, 255, .05);
+}
+
+.active {
+	color: #43afed;
+}
+
 #emailInput {
 	background-color: transparent;
 	color: #ffffff;
@@ -42,11 +77,12 @@
 	left: 30%;
 	font-family: NexaBold;
 	font-size: 15px;
-	font-weight: bold;
+	font-weight: lighter;
 	font-style: normal;
 	font-stretch: normal;
 	line-height: normal;
 	letter-spacing: 3px;
+	padding-bottom: 5px;
 }
 
 #emailInput:focus {
@@ -69,7 +105,7 @@
 }
 
 #bottle {
-	width: 8%;
+	width: 93px;
 	position: absolute;
 	left: 62%;
 	top: 77.5%;
@@ -77,19 +113,90 @@
 	opacity: .5;
 }
 
-img#centerLogo {
-	width: 20%;
+#otter {
+	width: 12%;
 	position: absolute;
-	left: 37%;
-	top: 40%;
+	right: 15%;
+	top: 57%;
+}
+
+img#centerLogo {
+	width: 185px;
+	position: absolute;
+	left: calc((100% - 185px) / 2);
+	top: 38%;
 }
 
 img#waveGroup {
 	width: 80%;
 	position: absolute;
-	left: 15%;
-	top: 15%;
+	left: 12%;
+	top: 12%;
 	opacity: .4;
+}
+
+.lights {
+	opacity: .1;
+	animation: illuminate 5s infinite;
+	animation-timing-function: linear;
+}
+
+img#lights1 {
+	width: 49%;
+	position: absolute;
+	left: 29%;
+	top: 17%;
+}
+
+img#lights2 {
+	width: 53%;
+	position: absolute;
+	left: 21%;
+	top: 17%;
+	animation-delay: 2s;
+}
+
+img#spotLight {
+	width: 18%;
+	position: absolute;
+	top: 19%;
+	left: 38%;
+}
+
+.waves {
+	animation: wave 5s infinite;
+	animation-timing-function: linear;
+}
+
+img#wave4 {
+	width: 43%;
+	position: absolute;
+	left: 12%;
+	top: 15%;
+	animation-delay: 3s
+}
+
+img#wave3 {
+	width: 64%;
+	position: absolute;
+	left: 28%;
+	top: 15%;
+	animation-delay: 1s
+}
+
+img#wave2 {
+	width: 55%;
+	position: absolute;
+	left: 25%;
+	top: 18%;
+	animation-delay: 2s
+}
+
+img#wave1 {
+	width: 53%;
+	position: absolute;
+	left: 23.5%;
+	top: 12%;
 }
 
 img#leftBiome {
@@ -105,3 +212,26 @@ img#rightBiome {
 	bottom: 0;
 	right: -3.5%;
 }
+
+@keyframes illuminate {
+	0%, 100% {opacity: .1;}
+	50% {opacity: 1;}
+}
+
+@keyframes wave {
+	0%, 100% {transform: translateX(0);}
+	25% {transform: translateX(-3%);}
+	75% {transform: translateX(3%);}
+}
+
+@keyframes bounce {
+	0%, 50%, 100% {transform: translateY(0);}
+	25% {transform:translateY(-5px);}
+	75% {transform: translateY(-3px);}
+}
+
+@keyframes swim {
+	from {transform: translateX(-100%);}
+	to {transform: translateX(100%);}
+}
+
