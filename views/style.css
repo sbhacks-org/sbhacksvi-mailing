@@ -200,13 +200,18 @@ img#wave1 {
 }
 
 div#fish {
+	position: relative;
+	top: 40%;
 	animation: swim 20s infinite;
 	animation-timing-function: linear;
+	animation-fill-mode: forwards;
 }
 
 .fish {
 	position: absolute;
+	top: 48%;
 	animation: bounce 2s infinite;
+	animation-timing-function: linear;
 }
 
 img#fishGroup {
