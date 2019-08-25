@@ -100,12 +100,12 @@ body {
 
 #bottle:active{
 	width: 7.6%;
-	left: 62.3%;
+	left: 62.2%;
 	top: 77.6%;
 }
 
 #bottle {
-	width: 93px;
+	width: 8%;
 	position: absolute;
 	left: 62%;
 	top: 77.5%;
@@ -199,6 +199,39 @@ img#wave1 {
 	top: 12%;
 }
 
+div#fish {
+	animation: swim 20s infinite;
+	animation-timing-function: linear;
+}
+
+.fish {
+	position: absolute;
+	animation: bounce 2s infinite;
+}
+
+img#fishGroup {
+	width: 100%;
+	position: absolute;
+	top: 48%;
+	opacity: 0;
+}
+
+img#fish1 {
+	width: 73%;
+	left: 11%;
+}
+
+img#fish2 {
+	width: 94%;
+	left: 6%;
+	animation-delay: .2s;
+}
+
+img#fish3 {
+	width: 95%;
+	animation-delay: .4s;
+}
+
 img#leftBiome {
 	width: 30%;
 	position: absolute;
@@ -231,7 +264,9 @@ img#rightBiome {
 }
 
 @keyframes swim {
-	from {transform: translateX(-100%);}
-	to {transform: translateX(100%);}
+	from {
+		transform: translateX(200%);
+	}
+	to {transform: translateX(-100%);}
 }
 
