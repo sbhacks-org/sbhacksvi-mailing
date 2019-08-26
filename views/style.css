@@ -64,6 +64,7 @@ body {
 	color: #43afed;
 }
 
+
 #emailInput {
 	background-color: transparent;
 	color: #ffffff;
@@ -73,7 +74,8 @@ body {
 	opacity: .5;
 	width: 30%;
 	position: absolute;
-	top: 80%;
+/*	top: 80%;*/
+    bottom: 18%;
 	left: 30%;
 	font-family: NexaBold;
 	font-size: 15px;
@@ -101,27 +103,31 @@ body {
 #bottle:active{
 	width: 7.6%;
 	left: 62.2%;
-	top: 77.6%;
+    bottom: 17.2%;
+/*	top: 77.6%;*/
 }
 
 #bottle {
 	width: 8%;
 	position: absolute;
 	left: 62%;
-	top: 77.5%;
+    bottom: 17%;
+/*	top: 77.5%;*/
 	cursor: pointer;
 	opacity: .5;
 }
 
 #otter {
-	width: 12%;
+	width: 156px;
 	position: absolute;
-	right: 15%;
-	top: 57%;
+/*	right: 15%;*/
+    right: calc((100% - 156px) * .15);
+    bottom: 15%;
 }
 
 img#centerLogo {
 	width: 185px;
+    height: 230.69px;
 	position: absolute;
 	left: calc((100% - 185px) / 2);
 	top: 38%;
@@ -143,6 +149,7 @@ img#waveGroup {
 
 img#lights1 {
 	width: 49%;
+    width: 542px;
 	position: absolute;
 	left: 29%;
 	top: 17%;
@@ -150,6 +157,7 @@ img#lights1 {
 
 img#lights2 {
 	width: 53%;
+    width: 586px;
 	position: absolute;
 	left: 21%;
 	top: 17%;
@@ -158,43 +166,45 @@ img#lights2 {
 
 img#spotLight {
 	width: 18%;
+    width: 199px;
 	position: absolute;
 	top: 19%;
 	left: 38%;
 }
 
 .waves {
+    position: absolute;
 	animation: wave 5s infinite;
 	animation-timing-function: linear;
 }
 
 img#wave4 {
-	width: 43%;
-	position: absolute;
+/*	width: 43%;*/
+    width: 510px;
 	left: 12%;
 	top: 15%;
 	animation-delay: 3s
 }
 
 img#wave3 {
-	width: 64%;
-	position: absolute;
+/*	width: 64%;*/
+    width: 758px;
 	left: 28%;
 	top: 15%;
 	animation-delay: 1s
 }
 
 img#wave2 {
-	width: 55%;
-	position: absolute;
-	left: 25%;
+/*	width: 55%;*/
+	width: 652px;
+    left: 25%;
 	top: 18%;
 	animation-delay: 2s
 }
 
 img#wave1 {
-	width: 53%;
-	position: absolute;
+/*	width: 53%;*/
+    width: 628px;
 	left: 23.5%;
 	top: 12%;
 }
@@ -273,5 +283,76 @@ img#rightBiome {
 		transform: translateX(200%);
 	}
 	to {transform: translateX(-100%);}
+}
+
+@media screen and (max-width: 600px) {
+    #otter {
+        display: none;
+    }
+    
+    #emailInput {
+        width: 56%;
+        left: 22%;
+        bottom: 20%;
+    }
+    
+    #bottle {
+        width: 24%;
+        left: 38%;
+        bottom: 12%
+    }
+    
+    #bottle:active{
+        width: 23.6%;
+        left: 38.2%;
+        bottom: 12.2%
+    }
+    
+    img#leftBiome {
+        display: none;
+    }
+    
+    img#rightBiome {
+        width: 60%;
+        right: -20%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+    img#wave4 {
+        width: 43%;
+        left: 12%;
+        top: 15%;
+    }
+
+    img#wave3 {
+        width: 64%;
+        left: 28%;
+        top: 15%;
+    }
+
+    img#wave2 {
+        width: 55%;
+        left: 25%;
+        top: 18%;
+    }
+
+    img#wave1 {
+        width: 53%;
+        left: 23.5%;
+        top: 12%;
+    }
 }
 
