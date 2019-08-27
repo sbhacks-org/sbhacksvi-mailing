@@ -133,12 +133,21 @@ img#centerLogo {
 	top: 38%;
 }
 
+div#center {
+    position: relative;
+    width: 900px;
+    height: 300px;
+    top: 3%;
+    left: calc((100% - 900px) / 2);
+}
+
 img#waveGroup {
-	width: 80%;
+	width: 100%;
 	position: absolute;
-	left: 12%;
-	top: 12%;
-	opacity: .4;
+	left: 3%;
+	top: 0;
+    opacity: .4;
+	display: none;
 }
 
 .lights {
@@ -151,7 +160,7 @@ img#lights1 {
 	width: 49%;
     width: 542px;
 	position: absolute;
-	left: 29%;
+	left: 25%;
 	top: 17%;
 }
 
@@ -159,8 +168,8 @@ img#lights2 {
 	width: 53%;
     width: 586px;
 	position: absolute;
-	left: 21%;
-	top: 17%;
+	left: 14%;
+	top: 12%;
 	animation-delay: 2s;
 }
 
@@ -170,43 +179,44 @@ img#spotLight {
 	position: absolute;
 	top: 19%;
 	left: 38%;
+    z-index: 1;
 }
 
 .waves {
     position: absolute;
-	animation: wave 5s infinite;
+	animation: harmonic 5s infinite;
 	animation-timing-function: linear;
 }
 
 img#wave4 {
 /*	width: 43%;*/
     width: 510px;
-	left: 12%;
-	top: 15%;
+	left: 3%;
+	top: 8%;
 	animation-delay: 3s
 }
 
 img#wave3 {
 /*	width: 64%;*/
     width: 758px;
-	left: 28%;
-	top: 15%;
+	left: 18%;
+	top: 6%;
 	animation-delay: 1s
 }
 
 img#wave2 {
 /*	width: 55%;*/
 	width: 652px;
-    left: 25%;
-	top: 18%;
+    left: 15%;
+	top: 16%;
 	animation-delay: 2s
 }
 
 img#wave1 {
 /*	width: 53%;*/
     width: 628px;
-	left: 23.5%;
-	top: 12%;
+	left: 15%;
+	top: 0;
 }
 
 div#fish {
@@ -266,7 +276,7 @@ img#rightBiome {
 	50% {opacity: 1;}
 }
 
-@keyframes wave {
+@keyframes harmonic {
 	0%, 100% {transform: translateX(0);}
 	25% {transform: translateX(-3%);}
 	75% {transform: translateX(3%);}
@@ -331,28 +341,59 @@ img#rightBiome {
 }
 
 @media screen and (min-width: 1200px) {
+    #center {
+        width: 90%;
+        height: 30ew;
+    }
+    
+    img#lights1 {
+        width: 60%;
+        position: absolute;
+        left: 25%;
+        top: 17%;
+    }
+
+    img#lights2 {
+        width: 65%;
+        position: absolute;
+        left: 14%;
+        top: 12%;
+        animation-delay: 2s;
+    }
+
+    img#spotLight {
+        width: 22%;
+        position: absolute;
+        top: 19%;
+        left: 38%;
+        z-index: 1;
+    }
+
     img#wave4 {
-        width: 43%;
-        left: 12%;
-        top: 15%;
+    	width: 57%;
+        left: 3%;
+        top: 8%;
+        animation-delay: 3s
     }
 
     img#wave3 {
-        width: 64%;
-        left: 28%;
-        top: 15%;
+    	width: 84%;
+        left: 18%;
+        top: 6%;
+        animation-delay: 1s
     }
 
     img#wave2 {
-        width: 55%;
-        left: 25%;
-        top: 18%;
+    	width: 72%;
+        left: 15%;
+        top: 16%;
+        animation-delay: 2s
     }
 
     img#wave1 {
-        width: 53%;
-        left: 23.5%;
-        top: 12%;
+    	width: 70%;
+        left: 15%;
+        top: 0;
     }
 }
 
