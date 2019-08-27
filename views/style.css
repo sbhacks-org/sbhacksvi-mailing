@@ -64,6 +64,13 @@ body {
 	color: #43afed;
 }
 
+#emailField {
+    position: relative;
+    width: 40%;
+    height: 10%;
+    left: 30%;
+    top: 30%;
+}
 
 #emailInput {
 	background-color: transparent;
@@ -72,11 +79,11 @@ body {
 	border: none;
 	border-bottom: 2px solid rgba(255, 255, 255, .5);
 	opacity: .5;
-	width: 30%;
+	width: 75%;
 	position: absolute;
 /*	top: 80%;*/
-    bottom: 18%;
-	left: 30%;
+    bottom: 0;
+	left: 0;
 	font-family: NexaBold;
 	font-size: 15px;
 	font-weight: lighter;
@@ -101,17 +108,17 @@ body {
 }
 
 #bottle:active{
-	width: 7.6%;
-	left: 62.2%;
-    bottom: 17.2%;
+	width: 21%;
+	right: .5%;
+    bottom: .5%;
 /*	top: 77.6%;*/
 }
 
 #bottle {
-	width: 8%;
+	width: 22%;
 	position: absolute;
-	left: 62%;
-    bottom: 17%;
+    right: 0;
+    bottom: 0;
 /*	top: 77.5%;*/
 	cursor: pointer;
 	opacity: .5;
@@ -193,7 +200,7 @@ img#wave4 {
     width: 510px;
 	left: 3%;
 	top: 8%;
-	animation-delay: 3s
+	animation-delay: 3s;
 }
 
 img#wave3 {
@@ -201,7 +208,7 @@ img#wave3 {
     width: 758px;
 	left: 18%;
 	top: 6%;
-	animation-delay: 1s
+	animation-delay: 1s;
 }
 
 img#wave2 {
@@ -300,22 +307,27 @@ img#rightBiome {
         display: none;
     }
     
+    #emailField {
+        width: 60%;
+        left: 20%;
+    }
+    
     #emailInput {
-        width: 56%;
-        left: 22%;
-        bottom: 20%;
+        position: static;
+        width: 100%;
+        left: 0;
     }
     
     #bottle {
-        width: 24%;
-        left: 38%;
-        bottom: 12%
+        position: relative;
+        width: 48%;
+        left: 27%;
+        top: 10px;
     }
     
-    #bottle:active{
-        width: 23.6%;
-        left: 38.2%;
-        bottom: 12.2%
+    #bottle:active {
+        width: 47%;
+        left: 27.5%;
     }
     
     img#leftBiome {
@@ -329,65 +341,146 @@ img#rightBiome {
 }
 
 @media screen and (min-width: 600px) {
-
+    #otter {
+        right: calc((100% - 156px) * .1);
+        bottom: 11%;
+    }
+    
+    #emailField {
+        width: 46%;
+        left: 27%;
+    }
+    
+    #emailInput {
+        position: static;
+        width: 100%;
+        left: 0;
+    }
+    
+    #bottle {
+        position: relative;
+        width: 40%;
+        left: 32%;
+        top: 10px;
+    }
+    
+    #bottle:active {
+        width: 39%;
+        left: 32.5%;
+    }
 }
 
 @media screen and (min-width: 768px) {
-
+    #emailField {
+        width: 44%;
+        left: 28%;
+    }
+    
+    #emailInput {
+        width: calc(100% - 75px - 10px);
+        position: absolute;
+        left: 0;
+    }
+    
+    #bottle {
+        width: 75px;
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: -5px;
+    }
+    
+    #bottle:active {
+        width: 73px;
+        left: auto;
+        right: 1px;
+        bottom: -4px;
+    }
 }
 
 @media screen and (min-width: 992px) {
-
+    #otter {
+        right: calc((100% - 156px) * .13);
+    }
+    
+    #bottle {
+        width: 96px;
+        bottom: -7px;
+    }
+    
+    #bottle:active {
+        width: 94px;
+        bottom: -6px;
+    }
+    
+    #emailInput {
+        width: calc(100% - 96px - 13px);
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    #center {
-        width: 90%;
+    #otter {
+        right: calc((100% - 156px) * .15);
+    }
+    
+    #emailField {
+        width: 40%;
+        left: 30%;
+    }
+    
+    #bottle {
+        width: 116px;
+    }
+    
+    #bottle:active {
+        width: 114px;
+    }
+    
+    #emailInput {
+        width: calc(100% - 116px - 15px);
+    }
+    
+    div#center {
+        width: 80%;
         height: 30ew;
+        left: 10%;
     }
     
     img#lights1 {
         width: 60%;
-        position: absolute;
         left: 25%;
         top: 17%;
     }
 
     img#lights2 {
         width: 65%;
-        position: absolute;
         left: 14%;
         top: 12%;
-        animation-delay: 2s;
     }
 
     img#spotLight {
         width: 22%;
-        position: absolute;
         top: 19%;
         left: 38%;
-        z-index: 1;
     }
 
     img#wave4 {
     	width: 57%;
         left: 3%;
         top: 8%;
-        animation-delay: 3s
     }
 
     img#wave3 {
     	width: 84%;
         left: 18%;
         top: 6%;
-        animation-delay: 1s
     }
 
     img#wave2 {
     	width: 72%;
         left: 15%;
         top: 16%;
-        animation-delay: 2s
     }
 
     img#wave1 {
