@@ -16,18 +16,17 @@ body {
 	width: 100%;
 	height: 100%;
 	position: absolute;
+    z-index: -2;
 }
 
-/*div#leftBiome {
-	width: 30%;
-	position: fixed;
-	margin: 0;
-	padding: 0;
-}*/
+#navBar, #navBar ul, #navBar ul li, #navBar ul li a {
+    z-index: 1;
+}
 
 #navBar {
 	background-image: url("assets/png/Asset 16.png");
 	background-size: cover;
+    position: fixed;
 	width: 100%;
 	height: 60px;
 	display: flex;
@@ -37,7 +36,6 @@ body {
 	list-style-type: : none;
 	margin: 0;
 	padding: 0;
-	position: fixed;
 	top: 0;
 	width: 100%;
 }
@@ -65,11 +63,12 @@ body {
 }
 
 #emailField {
-    position: relative;
+    position: absolute;
     width: 40%;
     height: 10%;
     left: 30%;
-    top: 30%;
+/*    top: 30%;*/
+    bottom: calc((100% - 230.69px) / 4)
 }
 
 #emailInput {
@@ -92,6 +91,7 @@ body {
 	line-height: normal;
 	letter-spacing: 3px;
 	padding-bottom: 5px;
+    z-index: 1;
 }
 
 #emailInput:focus {
@@ -122,6 +122,7 @@ body {
 /*	top: 77.5%;*/
 	cursor: pointer;
 	opacity: .5;
+    z-index: 1;
 }
 
 #otter {
@@ -132,12 +133,21 @@ body {
     bottom: 15%;
 }
 
-img#centerLogo {
+#centerLogo {
 	width: 185px;
     height: 230.69px;
 	position: absolute;
 	left: calc((100% - 185px) / 2);
-	top: 38%;
+	top: calc((100% - 230.69px) / 2);
+}
+
+#info {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: calc((100% - 230.69px) / 2 + 230.69px);
+    letter-spacing: 3px;
+    font-size: 20px;
 }
 
 div#center {
@@ -209,6 +219,7 @@ img#wave3 {
 	left: 18%;
 	top: 6%;
 	animation-delay: 1s;
+    z-index: -1;
 }
 
 img#wave2 {
@@ -264,18 +275,63 @@ img#fish3 {
 	animation-delay: .4s;
 }
 
-img#leftBiome {
+#left {
 	width: 30%;
+    height: 100%;
 	position: absolute;
-	bottom: -10px;
-	left: -2%;
+	bottom: 0;
+	left: 0;
+}
+
+img#leftBiome {
+    position: absolute;
+    width: 100%;
+    bottom: -1%;
+    left: -8%;
+    display: none;
+}
+
+img#leftLand {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+img#darkKelp {
+    width: 40%;
+    position: absolute;
+    left: 0;
+    bottom: 22%;
+}
+
+img#greenKelp {
+    width: 60%;
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+}
+
+img#blueKelp {
+    width: 68%;
+    position: absolute;
+    left: 0;
+    bottom: 8%;
+}
+
+#right {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
 }
 
 img#rightBiome {
-	width: 25%;
+	width: 100%;
 	position: absolute;
 	bottom: 0;
-	right: -3.5%;
+	right: -15%;
 }
 
 @keyframes illuminate {
@@ -303,6 +359,10 @@ img#rightBiome {
 }
 
 @media screen and (max-width: 600px) {
+    #info {
+        font-size: 15px;    
+    }
+    
     #otter {
         display: none;
     }
@@ -310,6 +370,7 @@ img#rightBiome {
     #emailField {
         width: 60%;
         left: 20%;
+        bottom: calc((100% - 230.69px) / 4.5);
     }
     
     #emailInput {
@@ -320,8 +381,8 @@ img#rightBiome {
     
     #bottle {
         position: relative;
-        width: 48%;
-        left: 27%;
+        width: 44%;
+        left: 31%;
         top: 10px;
     }
     
@@ -330,18 +391,34 @@ img#rightBiome {
         left: 27.5%;
     }
     
-    img#leftBiome {
-        display: none;
+    #left {
+        width: 50%;
+        left: -12%;
     }
     
-    img#rightBiome {
+    img#darkKelp {
+        width: 45%;
+        bottom: 35%;
+        left: 10%;
+    }
+    
+    img#greenKelp {
+        width: 80%;
+    }
+    
+    #right {
         width: 60%;
-        right: -20%;
+        right: -15%;
     }
 }
 
 @media screen and (min-width: 600px) {
+    #info {
+        font-size: 15px;
+    }
+    
     #otter {
+        width: 120px;
         right: calc((100% - 156px) * .1);
         bottom: 11%;
     }
@@ -349,6 +426,7 @@ img#rightBiome {
     #emailField {
         width: 46%;
         left: 27%;
+        bottom: calc((100% - 230.69px) / 5);
     }
     
     #emailInput {
@@ -368,12 +446,38 @@ img#rightBiome {
         width: 39%;
         left: 32.5%;
     }
+    
+    #left {
+        width: 45%;
+        left: -8%;
+    }
+    
+    img#darkKelp {
+        width: 40%;
+        bottom: 35%;
+        left: 10%;
+    }
+    
+    img#greenKelp {
+        width: 70%;
+        left: 8%;
+    }
+    
+    #right {
+        width: 50%;
+        right: -8%;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    #info {
+        font-size: 20px;
+    }
+    
     #emailField {
         width: 44%;
         left: 28%;
+        bottom: calc((100% - 230.69px) / 4);
     }
     
     #emailInput {
@@ -397,10 +501,33 @@ img#rightBiome {
         right: 1px;
         bottom: -4px;
     }
+    
+    #left {
+        width: 35%;
+        left: 0;
+    }
+
+    img#darkKelp {
+        width: 50%;
+        left: 0;
+        bottom: 25%;
+    }
+
+    img#greenKelp {
+        width: 75%;
+        left: 0;
+        bottom: 20%;
+    }
+
+    #right {
+        width: 40%;
+        right: 0;
+    }
 }
 
 @media screen and (min-width: 992px) {
     #otter {
+        width: 156px;
         right: calc((100% - 156px) * .13);
     }
     
@@ -416,6 +543,16 @@ img#rightBiome {
     
     #emailInput {
         width: calc(100% - 96px - 13px);
+    }
+    
+    #left {
+        width: 28%;
+        left: 0;
+    }
+
+    #right {
+        width: 30%;
+        right: 0;
     }
 }
 
@@ -490,3 +627,8 @@ img#rightBiome {
     }
 }
 
+@media screen and (max-height: 600px) {
+    #landing {
+        height: 600px;
+    }
+}
