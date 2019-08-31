@@ -201,7 +201,7 @@ img#spotLight {
 
 .waves {
     position: absolute;
-	animation: harmonic 5s infinite;
+	animation: harmonic 10s infinite;
 	animation-timing-function: linear;
 }
 
@@ -356,6 +356,23 @@ img#rightBiome {
 		transform: translateX(200%);
 	}
 	to {transform: translateX(-100%);}
+}
+
+@keyframes bounceRight {
+  from {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+
+.bounceOutRight {
+  animation: bounceRight .30s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 @media screen and (max-width: 600px) {

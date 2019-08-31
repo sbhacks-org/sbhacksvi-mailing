@@ -58,9 +58,9 @@
         </div>
 
 		<div id = "emailField">
-			<form id = "emailForm">
+			<form id = "emailForm" onsubmit="activateBounceRight(); return false;">
 				<!-- <input id = "emailInput" type = "image" placeholder = "Enter Email for Updates" src = "assets/svg/Asset 14.svg" required autofocus> -->
-				<input id = "emailInput" placeholder = "Enter Email for Updates" required autofocus>
+				<input id = "emailInput" placeholder = "Enter Email for Updates" type = "email" required autofocus>
 				<input id = "bottle" src = "assets/svg/Asset 14.svg" alt = "submit" type = "image">
 			</form>
 		</div>
@@ -68,5 +68,9 @@
 	</div>
 
 </body>
-
+<script>
+	function activateBounceRight() {
+		document.getElementById("bottle").className = "bounceOutRight";
+	}
+</script>
 </html>
