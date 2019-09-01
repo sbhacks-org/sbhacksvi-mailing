@@ -1,7 +1,7 @@
 
 @font-face {
 	font-family: NexaBold;
-	src: url(assets/fonts/NexaBold.otf);
+	src: url(./fonts/NexaBold.otf);
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 }
 
 #landing {
-	background-image: url("assets/png/Asset 15.png");
+	background-image: url("./png/Asset 15.png");
 	background-size: cover;
 	background-position: center;
 	width: 100%;
@@ -24,7 +24,7 @@ body {
 }
 
 #navBar {
-	background-image: url("assets/png/Asset 16.png");
+	background-image: url("./png/Asset 16.png");
 	background-size: cover;
     position: fixed;
 	width: 100%;
