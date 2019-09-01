@@ -1,3 +1,8 @@
+:root {
+    --successColor: #4CAF50;
+    --errorColor: #f44336;
+}
+
 
 @font-face {
 	font-family: NexaBold;
@@ -123,6 +128,35 @@ body {
 	cursor: pointer;
 	opacity: .5;
     z-index: 1;
+}
+
+.alertContainer {
+    opacity: 0;
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 20%;
+    visibility: hidden;
+}
+
+.closeMsgButton {
+    font-size: 30px;
+    position: absolute;
+    right: 4%;
+    top: 26%;
+}
+
+.closeMsgButton:hover {
+    color: black;
+}
+
+.errorMsgHolder {
+    background-color: var(--errorColor);
+}
+
+.successMsgHolder {
+    background-color: var(--successColor);
 }
 
 #otter {

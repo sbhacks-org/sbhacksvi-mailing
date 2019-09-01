@@ -6,7 +6,6 @@ module.exports = (app, db) => {
 	});
 
 	app.post("/email", (req, res) => {
-		console.log(req.body);
 		Email.create({email: req.body.email}).then((email) => {
 			return res.json({
 				success: true,
