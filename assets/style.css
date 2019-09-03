@@ -57,7 +57,7 @@ body {
 #navBar ul li a {
 	display: block;
 	text-align: center;
-	padding: 23px 16px;
+	padding: 20.5px 16px;
 	color: #7498bc;
 	text-decoration-line: none;
 }
@@ -139,8 +139,9 @@ body {
     color: white;
     position: absolute;
     text-align: center;
-    letter-spacing: 5px;
-    width: 100%;
+    letter-spacing: 3px;
+    font-size: 15px;
+    width: 75%;
     bottom: -70%;
 /*    margin-top: 20%;
 */    visibility: hidden;
@@ -149,8 +150,9 @@ body {
 .closeMsgButton {
     font-size: 30px;
     position: absolute;
-    right: 4%;
-    top: 26%;
+    text-align: center;
+    right: 3%;
+    top: 20%;
 }
 
 .closeMsgButton:hover {
@@ -163,6 +165,12 @@ body {
 
 .successMsgHolder {
     background-color: var(--successColorRgba);
+}
+
+.bounceOutRight {
+  animation: bounceRight .30s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 #otter {
@@ -209,7 +217,7 @@ img#waveGroup {
 
 .lights {
 	opacity: .1;
-	animation: illuminate 5s infinite;
+	animation: illuminate 7s infinite;
 	animation-timing-function: linear;
 }
 
@@ -241,7 +249,7 @@ img#spotLight {
 
 .waves {
     position: absolute;
-	animation: harmonic 5s infinite;
+	animation: harmonic 8s infinite;
 	animation-timing-function: linear;
 }
 
@@ -398,6 +406,17 @@ img#rightBiome {
 	to {transform: translateX(-100%);}
 }
 
+@keyframes bounceRight {
+  from {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+
 @media screen and (max-width: 600px) {
     #info {
         font-size: 15px;    
@@ -408,6 +427,8 @@ img#rightBiome {
         bottom: 0;
         padding: 5px;
         margin-top: 15px;
+        width: 100%;
+        font-size: 10px;
     }
     
     #otter {
@@ -469,6 +490,8 @@ img#rightBiome {
         bottom: 0;
         padding: 5px;
         margin-top: 15px;
+        width: 100%;
+        font-size: 12px;
     }
     
     #otter {
@@ -533,6 +556,7 @@ img#rightBiome {
         bottom: -70%;
         padding: 0;
         margin-top: 0;
+        width: calc(100% - 75px - 10px);
     }
     
     #emailField {
@@ -587,6 +611,10 @@ img#rightBiome {
 }
 
 @media screen and (min-width: 992px) {
+    .alertContainer { 
+        width: calc(100% - 96px - 13px); 
+    }
+
     #otter {
         width: 156px;
         right: calc((100% - 156px) * .13);
@@ -618,6 +646,10 @@ img#rightBiome {
 }
 
 @media screen and (min-width: 1200px) {
+    .alertContainer {
+        width: calc(100% - 116px - 15px);
+    }
+
     #otter {
         right: calc((100% - 156px) * .15);
     }
