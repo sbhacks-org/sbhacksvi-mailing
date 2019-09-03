@@ -57,7 +57,7 @@ body {
 #navBar ul li a {
 	display: block;
 	text-align: center;
-	padding: 23px 16px;
+	padding: 20.5px 16px;
 	color: #7498bc;
 	text-decoration-line: none;
 }
@@ -209,7 +209,7 @@ img#waveGroup {
 
 .lights {
 	opacity: .1;
-	animation: illuminate 5s infinite;
+	animation: illuminate 7s infinite;
 	animation-timing-function: linear;
 }
 
@@ -241,7 +241,7 @@ img#spotLight {
 
 .waves {
     position: absolute;
-	animation: harmonic 5s infinite;
+	animation: harmonic 8s infinite;
 	animation-timing-function: linear;
 }
 

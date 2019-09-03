@@ -60,11 +60,15 @@ window.onload = () => {
 		errorMsgText.innerHTML = errorMsg.content;
 		errorMsgHolder.style.opacity = '1';
 		errorMsgHolder.style.visibility = 'visible';
+		successMsgHolder.style.opacity = '0';
+		successMsgHolder.style.visibility = 'hidden';
 	}
 
 	function printSuccessMessage(successMsg) {
 		successMsgText.innerHTML = successMsg.content;
 		successMsgHolder.style.opacity = '1';
 		successMsgHolder.style.visibility = 'visible';
+		errorMsgHolder.style.opacity = '0';
+		errorMsgHolder.style.visibility = 'hidden';
 	}
 }
