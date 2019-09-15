@@ -7,6 +7,7 @@ module.exports = (app, db) => {
 
 	app.post("/email", (req, res) => {
 		Email.create({email: req.body.email}).then((email) => {
+			console.log('Duplicate email');
 			return res.json({
 				success: true,
 				message: {
@@ -19,6 +20,7 @@ module.exports = (app, db) => {
 			// Duplicate email
 			if (err["name"] == "SequelizeUniqueConstraintError")
 			{
+				console.log('Duplicate email');
 				return res.json({
 					success: false,
 					message: {
@@ -30,6 +32,7 @@ module.exports = (app, db) => {
 			}
 			// Invalid email or null
 			if (err["name"] == "SequelizeValidationError") {
+				console.log('Invalid/null email');
 				return res.json({
 					success: false,
 					message: {

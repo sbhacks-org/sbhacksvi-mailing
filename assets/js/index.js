@@ -15,11 +15,11 @@ window.onload = () => {
 	emailInputField.addEventListener('keypress', (e) => {
 		if (errorMsgHolder.style.opacity == '1' || successMsgHolder.style.opacity == '1') {
 			errorMsgHolder.style.opacity = '0';
-			errorMsgHolder.style.visibility = 'hidden';
+			errorMsgHolder.style.displau = 'none';
 		}
 		if (errorMsgHolder.style.opacity == '1' || successMsgHolder.style.opacity == '1') {
 			successMsgHolder.style.opacity = '0';
-			successMsgHolder.style.visibility = 'hidden';
+			successMsgHolder.style.display = 'none';
 		}
 		var key = e.which || e.keyCode;
 	    if (key === 13) { // 13 is enter
@@ -29,12 +29,12 @@ window.onload = () => {
 
 	successClose.addEventListener('click', (e) => {
 		successMsgHolder.style.opacity = '0';
-		successMsgHolder.style.visibility = 'hidden';
+		successMsgHolder.style.display = 'none';
 	});
 
 	errorClose.addEventListener('click', (e) => {
 		errorMsgHolder.style.opacity = '0';
-		errorMsgHolder.style.visibility = 'hidden';
+		errorMsgHolder.style.display = 'none';
 	})
 
 	function submitEmail() {
@@ -59,20 +59,16 @@ window.onload = () => {
 	function printErrorMessage(errorMsg) {
 		errorMsgText.innerHTML = errorMsg.content;
 		errorMsgHolder.style.opacity = '1';
-		// errorMsgHolder.style.visibility = 'visible';
 		errorMsgHolder.style.display = 'block';
 		successMsgHolder.style.opacity = '0';
-		// successMsgHolder.style.visibility = 'hidden';
 		successMsgHolder.style.display = 'none';
 	}
 
 	function printSuccessMessage(successMsg) {
 		successMsgText.innerHTML = successMsg.content;
 		successMsgHolder.style.opacity = '1';
-		// successMsgHolder.style.visibility = 'visible';
 		successMsgHolder.style.display = 'block';
 		errorMsgHolder.style.opacity = '0';
-		// errorMsgHolder.style.visibility = 'hidden';
 		errorMsgHolder.style.display = 'none';
 	}
 }
