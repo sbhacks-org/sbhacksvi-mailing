@@ -552,14 +552,14 @@ img#rightBiome {
         left: auto;
         right: 0;
         top: auto;
-        bottom: -5px;
+        bottom: -17px;
     }
     
     #bottle:active {
         width: 73px;
         left: auto;
         right: 1px;
-        bottom: -4px;
+        bottom: -16px;
     }
     
     #left {
@@ -593,12 +593,12 @@ img#rightBiome {
     
     #bottle {
         width: 96px;
-        bottom: -7px;
+        bottom: -20px;
     }
     
     #bottle:active {
         width: 94px;
-        bottom: -6px;
+        bottom: -19px;
     }
     
     #emailInput {
