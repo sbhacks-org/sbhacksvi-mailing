@@ -137,13 +137,14 @@ body {
 .alertContainer {
     opacity: 0;
     color: white;
-    position: absolute;
+    position: relative;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 0px;
     width: 100%;
     bottom: -70%;
-/*    margin-top: 20%;
-*/    visibility: hidden;
+    margin-top: 20%;
+/*    visibility: hidden;*/
+    display: none;
 }
 
 .closeMsgButton {
@@ -163,6 +164,10 @@ body {
 
 .successMsgHolder {
     background-color: var(--successColorRgba);
+}
+
+.alertsHolder {
+    position: relative;
 }
 
 #otter {
@@ -404,7 +409,6 @@ img#rightBiome {
     }
 
     .alertContainer {
-        position: relative;
         bottom: 0;
         padding: 5px;
         margin-top: 15px;
@@ -465,7 +469,6 @@ img#rightBiome {
     }
 
     .alertContainer {
-        position: relative;
         bottom: 0;
         padding: 5px;
         margin-top: 15px;
@@ -529,10 +532,8 @@ img#rightBiome {
     }
 
     .alertContainer {
-        position: absolute;
         bottom: -70%;
-        padding: 0;
-        margin-top: 0;
+        padding: 10px 0;
     }
     
     #emailField {
@@ -543,13 +544,11 @@ img#rightBiome {
     
     #emailInput {
         width: calc(100% - 75px - 10px);
-        position: absolute;
         left: 0;
     }
     
     #bottle {
         width: 75px;
-        position: absolute;
         left: auto;
         right: 0;
         top: auto;

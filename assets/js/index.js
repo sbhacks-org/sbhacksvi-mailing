@@ -59,16 +59,20 @@ window.onload = () => {
 	function printErrorMessage(errorMsg) {
 		errorMsgText.innerHTML = errorMsg.content;
 		errorMsgHolder.style.opacity = '1';
-		errorMsgHolder.style.visibility = 'visible';
+		// errorMsgHolder.style.visibility = 'visible';
+		errorMsgHolder.style.display = 'block';
 		successMsgHolder.style.opacity = '0';
-		successMsgHolder.style.visibility = 'hidden';
+		// successMsgHolder.style.visibility = 'hidden';
+		successMsgHolder.style.display = 'none';
 	}
 
 	function printSuccessMessage(successMsg) {
 		successMsgText.innerHTML = successMsg.content;
 		successMsgHolder.style.opacity = '1';
-		successMsgHolder.style.visibility = 'visible';
+		// successMsgHolder.style.visibility = 'visible';
+		successMsgHolder.style.display = 'block';
 		errorMsgHolder.style.opacity = '0';
-		errorMsgHolder.style.visibility = 'hidden';
+		// errorMsgHolder.style.visibility = 'hidden';
+		errorMsgHolder.style.display = 'none';
 	}
 }
