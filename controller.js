@@ -5,6 +5,10 @@ module.exports = (app, db) => {
 		res.render("index.ejs")
 	});
 
+	app.get("/sponsors-slidedeck", (req, res) => {
+		res.redirect(process.env.SLIDE_DECK_LINK)
+	});
+
 	app.post("/email", (req, res) => {
 		Email.create({email: req.body.email}).then((email) => {
 			console.log('Duplicate email');
