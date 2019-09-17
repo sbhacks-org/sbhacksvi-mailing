@@ -602,7 +602,7 @@ img#rightBiome {
     }
     
     #emailInput {
-        width: calc(100% - 96px - 13px);
+        width: calc(100% - 96px - 25px);
     }
     
     #left {
