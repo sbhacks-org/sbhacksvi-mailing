@@ -501,7 +501,8 @@ img#rightBiome {
     }
 }
 
-@media screen and (min-device-width : 375px) and (max-device-width : 667px) {
+/*iPhone 6/7/8 and Galaxy S8*/
+@media screen and (min-device-width : 375px) and (max-device-width : 667px), (min-width: 360px) and (max-width: 767px) {
     #centerLogo {
         top: calc((100% - 400px) / 2);
     }
