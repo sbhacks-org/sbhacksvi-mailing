@@ -4,6 +4,7 @@
     --successColorRgba: rgba(76, 175, 80, .3);
     --errorColorRgba: rgba(244, 67, 54, .3);
     --fontColor: #7498bc;
+    --linkColor: white;
 }
 
 
@@ -88,7 +89,7 @@ body {
 	border-bottom: 2px solid rgba(255, 255, 255, .5);
 	opacity: .5;
 	width: 75%;
-	position: absolute;
+	position: relative;
 /*	top: 80%;*/
     bottom: 0;
 	left: 0;
@@ -186,13 +187,33 @@ body {
 	top: calc((100% - 230.69px) / 2);
 }
 
-#info {
+
+.info-container {
     position: absolute;
     width: 100%;
     text-align: center;
     top: calc((100% - 230.69px) / 2 + 230.69px);
+    z-index: 100;
+}
+
+.info-container > h2{
+    margin: 2vh;
+}
+
+a{
+    color: var(--linkColor);
+}
+
+
+.info-item {
+    position: relative;
     letter-spacing: 3px;
     font-size: 20px;
+}
+
+.sponsor-item {
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 div#center {
@@ -421,11 +442,11 @@ img#rightBiome {
     #emailField {
         width: 60%;
         left: 20%;
-        bottom: calc((100% - 230.69px) / 4.5);
+        bottom: calc((100% - 300px) / 4.5);
     }
     
     #emailInput {
-        position: static;
+        position: relative;
         width: 100%;
         left: 0;
     }
@@ -463,6 +484,22 @@ img#rightBiome {
     }
 }
 
+/*iPhone 5/SE and Galaxy S5*/
+@media screen and (device-aspect-ratio: 40/71), (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+    #centerLogo {
+        top: calc((100% - 400px) / 2);
+    }
+    .info-container {
+        top: calc((100% - 390px) / 2 + 230.69px);
+    }
+    #emailField {
+        bottom: calc((100% - 100px) / 4.5);
+    }
+    #emailInput {
+        font-size: 10px;
+    }
+}
+
 @media screen and (min-width: 600px) {
     #info {
         font-size: 15px;
@@ -487,7 +524,7 @@ img#rightBiome {
     }
     
     #emailInput {
-        position: static;
+        position: relative;
         width: 100%;
         left: 0;
     }
@@ -646,6 +683,7 @@ img#rightBiome {
 
     #centerLogo {
         width: 13%;
+        max-height: 250px;
         height: auto;
         left: 44%;
         top: calc((100% - (13vw * 1.25)) / 2);
