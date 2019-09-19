@@ -214,6 +214,7 @@ a{
 .sponsor-item {
     font-size: 12px;
     letter-spacing: 1px;
+    line-height: 3vh;
 }
 
 div#center {
@@ -497,6 +498,18 @@ img#rightBiome {
     }
     #emailInput {
         font-size: 10px;
+    }
+}
+
+@media screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    #centerLogo {
+        top: calc((100% - 400px) / 2);
+    }
+    .info-container {
+        top: calc((100% - 390px) / 2 + 230.69px);
+    }
+    #emailField {
+        bottom: calc((100% - 50px) / 4.5);
     }
 }
 
