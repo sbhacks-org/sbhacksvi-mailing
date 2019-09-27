@@ -66,6 +66,7 @@ window.onload = () => {
 
 	function printSuccessMessage(successMsg) {
 		successMsgText.innerHTML = successMsg.content;
+		emailInputField.val = '';
 		successMsgHolder.style.opacity = '1';
 		successMsgHolder.style.display = 'block';
 		errorMsgHolder.style.opacity = '0';
