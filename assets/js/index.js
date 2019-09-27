@@ -51,6 +51,7 @@ window.onload = () => {
 				printErrorMessage(response.message);
 			}
 			else {
+				emailInputField.value = "";
 				printSuccessMessage(response.message);
 			}
 		})
@@ -66,7 +67,6 @@ window.onload = () => {
 
 	function printSuccessMessage(successMsg) {
 		successMsgText.innerHTML = successMsg.content;
-		emailInputField.val = '';
 		successMsgHolder.style.opacity = '1';
 		successMsgHolder.style.display = 'block';
 		errorMsgHolder.style.opacity = '0';
